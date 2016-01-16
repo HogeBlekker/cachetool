@@ -1,0 +1,12 @@
+Cachetool
+
+This module installs and configures Gordalina Cachetool for managing PHP's OpCache.
+
+License
+-------
+CacheTool is licensed under the MIT License - see the LICENSE
+
+
+Support
+-------
+Please log tickets and issues.

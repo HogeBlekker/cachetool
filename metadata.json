@@ -1,0 +1,28 @@
+{
+  "name": "hogeblekker-cachetool",
+  "version": "0.1.0",
+  "author": "hogeblekker",
+  "summary": "A Puppet module to manage gordalina cachetool for managing OpCache",
+  "license": "MIT License",
+  "source": "https://github.com/HogeBlekker/cachetool.git",
+  "project_page": "https://github.com/HogeBlekker/cachetool",
+  "issues_url": "https://github.com/HogeBlekker/cachetool/issues",
+  "description": "This Puppet module downloads Gordalina Cachetool from GitHub.io and sets proper configuration.",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    }
+  ],
+  "tags": [
+    "OpCache",
+    "CacheTool",
+    "Gordalina"
+  ],
+  "dependencies": [
+    {"name":"maestrodev/wget","version_requirement":">= 1.5.6"}
+  ]
+}
