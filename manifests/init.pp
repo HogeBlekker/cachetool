@@ -57,10 +57,11 @@ class cachetool(
 ) inherits cachetool::params {
 
     # Download the cachetool package
-    wget::fetch { 'cachetool_phar':
+    include '::archive'
+    archive { 'cachetool_phar':
+        ensure      => 'present',
         source      => $phar_location,
-        destination => "${target_dir}/${command_name}",
-        verbose     => false
+        path        => "${target_dir}/${command_name}",
     }
 
     # Set proper permissions if needed
@@ -70,7 +71,7 @@ class cachetool(
         cwd     => $target_dir,
         user    => $user,
         unless  => "test -x ${target_dir}/${command_name}",
-        require => Wget::Fetch['cachetool_phar']
+        require => Archive['cachetool_phar']
     }
 
     # Set configuration settings
